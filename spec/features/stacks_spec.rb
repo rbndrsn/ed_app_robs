@@ -21,10 +21,8 @@ describe Stack do
     it "displays a list of stacks" do
       stack = Stack.create(name: "new_stack")
       visit stacks_path
-      expect(page).should have_content("new_stack")
+      expect(page).to have_content("new_stack")
     end
   end
-
-
 
 end

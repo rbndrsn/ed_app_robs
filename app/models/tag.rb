@@ -1,8 +1,18 @@
 class Tag
-  include MongoMapper::Document
+  include Mongoid::Document
 
-  key :name, String
-  belongs_to :stack
+  field :name, type: String
 
-  timestamps!
+  has_and_belongs_to_many :stacks
 end
+
+
+
+# class Tag
+#   include MongoMapper::Document
+
+#   key :name, String
+#   belongs_to :stack
+
+#   timestamps!
+# end
