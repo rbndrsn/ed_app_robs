@@ -8,6 +8,12 @@
 </head>
 <body>
 
+<nav>
+  <%= link_to "Home", root_path %>
+  <%= link_to "Stacks", stacks_path %>
+  <%= link_to "Create Stack", new_stack_path %>
+</nav>
+
 <%= yield %>
 
 </body>
