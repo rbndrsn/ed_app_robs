@@ -39,14 +39,16 @@ describe Stack do
     expect(stack.is_custom).to eq true
   end
 
-  # describe 'add a card' do
-  #   it "should add a card to a stack" do
-  #     stack = Stack.create( )
-  #     card =
-  #     expect(stack.id).to_not eq nil
-  #   end
-  # end
-
+  it "finds all stacks tagged with Ruby" do
+    # ----   Stack.all(:tag_ids => [tag._id])
+    s1 = Stack.create( name: "stack_one" )
+    s2 = Stack.create( name: "stack_two" )
+    t1 = Tag.create( name: "Ruby" )
+    s1.tags << t1
+    s2.tags << t1
+    ruby_search = Stack.all(:tag_ids => [t1._id])
+    expect(ruby_search).to_not eq nil
+  end
 
 
 end #end Stack
