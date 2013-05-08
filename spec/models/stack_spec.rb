@@ -41,8 +41,8 @@ describe Stack do
 
   it "finds all stacks tagged with Ruby" do
     # ----   Stack.all(:tag_ids => [tag._id])
-    s1 = Stack.create( name: "stack_one" )
-    s2 = Stack.create( name: "stack_two" )
+    s1 = Stack.create( name: "Beginning Ruby" )
+    s2 = Stack.create( name: "Advanced Ruby" )
     t1 = Tag.create( name: "Ruby" )
     s1.tags << t1
     s2.tags << t1
