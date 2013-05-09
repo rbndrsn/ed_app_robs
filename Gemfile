@@ -1,25 +1,23 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.13'
+gem 'rails'
 
-# Bundle edge Rails instead:
-# gem 'rails', :git => 'git://github.com/rails/rails.git'
-
-gem 'sqlite3'
-
-
+# gem 'sqlite3'
 gem 'mongoid'
-#gem 'bson_ext'
 gem 'thin'
 
-group :development do
+group :development, :test do
+  gem "rspec-rails"
+  gem "capybara"
   gem "better_errors"
   gem "binding_of_caller"
+  gem "meta_request"
+  gem "poltergeist"
+  gem "pry"
   gem "rspec-rails"
   gem "capybara"
   gem "launchy"
   gem "database_cleaner"
-  gem "poltergeist"
 end
 
 
