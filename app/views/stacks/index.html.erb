@@ -1,1 +1,5 @@
-<%= @stacks %>
+<ul>
+  <% for stack in @stacks %>
+    <li id="<%= stack.id %>"><%= stack.name %> | <%= link_to 'View', stack_path(stack.id) %> | <%= link_to 'Delete Stack', stack, method: :delete, data: { confirm: 'Are you sure?' } %></li>
+  <% end %>
+</ul>

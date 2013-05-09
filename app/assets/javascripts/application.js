@@ -14,6 +14,9 @@
 //= require jquery_ujs
 //= require_tree .
 
+
+
+/*
 $(function(){
 
   // Load stacks JSON on nav stacks click
@@ -35,4 +38,4 @@ $(function(){
   });
 
 })
-
+*/
