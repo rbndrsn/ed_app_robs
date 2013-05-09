@@ -30,6 +30,23 @@ class StacksController < ApplicationController
     end
   end
 
+   def edit
+    @stack = Stack.find_by(id:params[:id])
+    respond_to do |format|
+      format.html
+      format.json { render :json => @stack}
+    end
+  end
+
+  def update
+    @stack = Stack.find_by(id:params[:id])
+    if @stack.update_attributes(params[:stack])
+      redirect_to @stack
+    else
+      render action: "edit"
+    end
+  end
+
   def destroy
     @stack = Stack.find(params[:id])
     @stack.destroy

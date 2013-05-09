@@ -18,7 +18,7 @@ describe Stack do
   #   end
   # end
 
-  describe "GET /stacks" do
+  describe "List Stacks -- GET /stacks" do
     it "displays a list of stacks" do
       stack = Stack.create(name: "new_stack")
       stack2 = Stack.create(name: "another_stack")
@@ -28,7 +28,7 @@ describe Stack do
     end
   end
 
-  describe "GET /stacks/new" do
+  describe "Create Stack --  GET /stacks/new" do
     it "displays a form to add a stack" do
       visit new_stack_path
       expect(page).to have_button('Create Stack')
@@ -43,7 +43,7 @@ describe Stack do
     end
   end
 
-  describe "GET /stack/:id" do
+  describe "View Stack -- GET /stack/:id" do
     it "display a link to view a stack" do
       stack = Stack.create(name: "new_stack")
       visit stacks_path
@@ -57,7 +57,28 @@ describe Stack do
     end
   end
 
-  describe "DESTROY /stack" do
+  describe "Edit Stack -- GET /stacks/:id/edit" do
+    it "display a link to edit a stack" do
+      stack = Stack.create(name: "new_stack")
+      visit stack_path(stack.id)
+      expect(page).to have_link("Edit")
+    end
+    it "displays the edit form" do
+      stack = Stack.create(name: "new_stack")
+      visit edit_stack_path(stack.id)
+      expect(page).to have_button('Update Stack')
+    end
+    it "updates a stack with a new name" do
+      stack = Stack.create(name: "new_stack")
+      visit edit_stack_path(stack.id)
+      fill_in "Name", :with => "changed_stack"
+      click_button 'Update Stack'
+      visit stack_path(stack.id)
+      expect(page).to have_content("changed_stack")
+    end
+  end
+
+  describe "Delete Stack -- DESTROY /stack" do
     it "deletes a stack" do
       stack = Stack.create(name: "new_stack")
       visit stacks_path

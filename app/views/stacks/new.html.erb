@@ -1,34 +1,3 @@
-<%= form_for @stack do |f| %>
+<h2>Add a new stack</h2>
 
-  <%= f.label :name %><br />
-  <%= f.text_field :name, placeholder: "e.g. Ruby" %>
-
-  <br />
-
-  <%= f.label :description %><br />
-  <%= f.text_area(:description, :cols => 30, :rows => 6) %>
-
-<!--   <br />
-
-  <div class="card-item">
-    <strong>Card</strong><br/>
-    <%= label_tag "Front" %><%= text_field_tag "Front" %><br />
-    <%= label_tag "Back" %><%= text_field_tag "Back" %>
-  </div>
-  <br />
-  <div class="card-item">
-    <strong>Card</strong><br/>
-    <%= label_tag "Front" %><%= text_field_tag "Front" %><br />
-    <%= label_tag "Back" %><%= text_field_tag "Back" %>
-  </div>
-  <br />
-  <div class="card-item">
-    <strong>Card</strong><br/>
-    <%= label_tag "Front" %><%= text_field_tag "Front" %><br />
-    <%= label_tag "Back" %><%= text_field_tag "Back" %>
-  </div> -->
-
-  <br />
-
-  <%= f.submit %>
-<% end %>
+<%= render partial: 'form' %>
