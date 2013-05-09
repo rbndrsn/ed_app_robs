@@ -12,6 +12,14 @@ class TagsController < ApplicationController
     @tag = Tag.new
   end
 
+  def edit
+    @tag = Tag.find_by(id:params[:id])
+    respond_to do |format|
+      format.html
+      format.json { render :json => @tag}
+    end
+  end
+
   def create
     @tag = Tag.new(params[:tag])
     if @tag.save

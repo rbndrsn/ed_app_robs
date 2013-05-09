@@ -41,26 +41,26 @@ end
     end
   end
 
-  # describe "Edit tag -- GET /tags/:id/edit" do
-  #   it "display a link to edit a tag" do
-  #     tag = Tag.create(name: "new_tag")
-  #     visit tag_path(tag.id)
-  #     expect(page).to have_link("Edit")
-  #   end
-  #   it "displays the edit form" do
-  #     tag = Tag.create(name: "new_tag")
-  #     visit edit_tag_path(tag.id)
-  #     expect(page).to have_button('Update Tag')
-  #   end
-  #   it "updates a tag with a new name" do
-  #     tag = Tag.create(name: "new_tag")
-  #     visit edit_tag_path(tag.id)
-  #     fill_in "name", :with => "changed_tag"
-  #     click_button 'Update tag'
-  #     visit tag_path(tag.id)
-  #     expect(page).to have_content("changed_tag")
-  #   end
-  # end
+  describe "Edit tag -- GET /tags/:id/edit" do
+    it "display a link to edit a tag" do
+      tag = Tag.create(name: "new_tag")
+      visit tag_path(tag.id)
+      expect(page).to have_link("Edit")
+    end
+    it "displays the edit form" do
+      tag = Tag.create(name: "new_tag")
+      visit edit_tag_path(tag.id)
+      expect(page).to have_button('Update Tag')
+    end
+    it "updates a tag with a new name" do
+      tag = Tag.create(name: "new_tag")
+      visit edit_tag_path(tag.id)
+      fill_in "Name", :with => "changed_tag"
+      click_button 'Update Tag'
+      visit tag_path(tag.id)
+      expect(page).to have_content("changed_tag")
+    end
+  end
 
   describe "Delete Tag -- DESTROY /tag" do
     it "deletes a tag" do
