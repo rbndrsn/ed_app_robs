@@ -32,7 +32,6 @@ $(function(){
         $('#content').append('<p id="' + val.id + '">name : ' + val.name+ '</p>');
       });
     });
-
   });
 
 })
