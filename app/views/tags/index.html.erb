@@ -1,0 +1,5 @@
+<ul>
+  <% for tag in @tags %>
+    <li id="<%= tag.id %>"><%= tag.name %> | <%= link_to 'View', tag_path(tag.id) %> | <%= link_to 'Delete Tag', tag, method: :delete, data: { confirm: 'Are you sure?' } %></li>
+  <% end %>
+</ul>
