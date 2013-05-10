@@ -1,23 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>EduApp</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title><%= yield(:title) %> Education App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <%= stylesheet_link_tag "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-<nav>
-  <%= link_to "Home", root_path %>
-  <%= link_to "Stacks", stacks_path, :class => "stacks_btn" %>
-  <%= link_to "Create Stack", new_stack_path %>
-  <%= link_to "Tags", tags_path, :class => "tags_btn" %>
-  <%= link_to "Create Tag", new_tag_path %>
-  
-</nav>
+  <nav role="primary">
+    <%= link_to "Home", root_path %>
+    <%= link_to "Stacks", stacks_path %>
+    <%= link_to "Create Stack", new_stack_path %>
+    <%= link_to "Tags", tags_path %>
+    <%= link_to "Create Tag", new_tag_path %>
+  </nav>
 
-<%= yield %>
+  <%= yield %>
 
 </body>
 </html>
