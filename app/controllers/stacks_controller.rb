@@ -26,7 +26,7 @@ class StacksController < ApplicationController
   end
 
   def show
-    @stack = Stack.find_by(id:params[:id])
+    @stack = Stack.find(params[:id])
     respond_to do |format|
       format.html { }
       format.json { render json: @stack }
@@ -34,7 +34,7 @@ class StacksController < ApplicationController
   end
 
    def edit
-    @stack = Stack.find_by(id:params[:id])
+    @stack = Stack.find(params[:id])
     respond_to do |format|
       format.html { }
       format.json { render :json => @stack }
@@ -42,7 +42,7 @@ class StacksController < ApplicationController
   end
 
   def update
-    @stack = Stack.find_by(id:params[:id])
+    @stack = Stack.find(params[:id])
     respond_to do |format|
       if @stack.update_attributes(params[:stack])
         format.html { redirect_to @stack, notice: 'stack was successfully updated.' }
@@ -59,5 +59,4 @@ class StacksController < ApplicationController
     @stack.destroy
     redirect_to stacks_path
   end
-
 end

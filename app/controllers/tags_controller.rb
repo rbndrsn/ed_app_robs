@@ -12,38 +12,45 @@ class TagsController < ApplicationController
     @tag = Tag.new
   end
 
-  def edit
-    @tag = Tag.find_by(id:params[:id])
-    respond_to do |format|
-      format.html
-      format.json { render :json => @tag}
-    end
-  end
-
   def create
     @tag = Tag.new(params[:tag])
-    if @tag.save
-      redirect_to tags_path
-    else
-      flash[:error] = "Sorry there was an error saving your Tag"
-      render action: "new"
+    respond_to do |format|
+      if @tag.save
+        format.html { redirect_to @tag, notice: 'tag was successfully created.' }
+        format.json { render json: @tag, status: :created, location: @tag }
+      else
+        format.html { render action: "new" }
+        format.json { render json: @tag.errors, status: :unprocessable_entity }
+      end
     end
   end
 
   def show
-    @tag = Tag.find_by(id:params[:id])
+    @tag = Tag.find(params[:id])
     respond_to do |format|
       format.html { }
       format.json { render json: @tag }
     end
   end
 
+  def edit
+    @tag = Tag.find(params[:id])
+    respond_to do |format|
+      format.html
+      format.json { render :json => @tag}
+    end
+  end
+
   def update
-    @tag = Tag.find_by(id:params[:id])
-    if @tag.update_attributes(params[:tag])
-      redirect_to @tag
-    else
-      render action: "edit"
+    @tag = Tag.find(params[:id])
+    respond_to do |format|
+      if @tag.update_attributes(params[:tag])
+        format.html { redirect_to @tag, notice: 'tag was successfully updated.' }
+        format.json { render json: @tag, status: :created, location: @tag }
+      else
+        format.html { render action: "edit" }
+        format.json { render json: @tag.errors, status: :unprocessable_entity }
+      end
     end
   end
 
@@ -52,5 +59,4 @@ class TagsController < ApplicationController
     @tag.destroy
     redirect_to tags_path
   end
-
 end
