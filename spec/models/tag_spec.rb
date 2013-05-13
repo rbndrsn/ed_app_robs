@@ -7,5 +7,9 @@ describe Tag do
     expect(tag).to be_an_instance_of(Tag)
   end
 
+  it "is created and has an id" do
+    tag = Tag.create()
+    expect(tag.id).to_not eq nil
+  end
 
-end #end Tag
+end #end Stack
