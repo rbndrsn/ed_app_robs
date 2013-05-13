@@ -5,6 +5,8 @@ require 'rspec/autorun'
 require 'capybara/rspec'
 require 'database_cleaner'
 require 'capybara/poltergeist'
+require 'factory_girl'
+
 Capybara.javascript_driver = :poltergeist
 
 Dir[Rails.root.join("spec/support/**/*.rb")].each {|f| require f}
@@ -20,6 +22,8 @@ RSpec.configure do |config|
   config.after(:each) do
     DatabaseCleaner.clean
   end
+
+  config.include FactoryGirl::Syntax::Methods
 
   config.color_enabled = true
   config.tty = true
