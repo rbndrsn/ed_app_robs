@@ -51,7 +51,7 @@ $half-grid-pad  : $grid-pad/2 ;
     width: 66.666%; } 
   }
 
-// quaters
+// quarters
 .col-1-4 { 
   width: 100%; 
   @include respond-to(spider) {

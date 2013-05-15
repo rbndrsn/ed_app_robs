@@ -11,15 +11,17 @@
 </head>
 <body>
 
-  <nav role="primary">
-    <%= link_to "Home", root_path %>
-    <%= link_to "Stacks", stacks_path %>
-    <%= link_to "Create Stack", new_stack_path %>
-    <%= link_to "Tags", tags_path %>
-    <%= link_to "Create Tag", new_tag_path %>
-  </nav>
+    <div class="wrapper">
+        <nav class="main_navigation" role="primary">
+          <%= link_to "Home", root_path %>
+          <%= link_to "Stacks", stacks_path %>
+          <%= link_to "Create Stack", new_stack_path %>
+          <%= link_to "Tags", tags_path %>
+          <%= link_to "Create Tag", new_tag_path %>
+        </nav>
 
-  <%= yield %>
+      <%= yield %>
 
-</body>
+    </div> <!-- /.wrapper -->
+  </body>
 </html>
