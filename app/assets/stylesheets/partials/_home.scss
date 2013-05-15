@@ -5,3 +5,25 @@
   padding: 10px;
   border-width: 2px;
 }
+.card {
+  background: $brand-gamma;
+}
+
+.card-content {
+  min-height: 600px;
+  display: table;
+    width: 100%;
+}
+
+.front, .back {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  font-weight: bold;
+  font-size: 48px;
+}
+
+.back {
+  display: none;
+}
+

@@ -46,7 +46,7 @@
         slider.prop = (vertical) ? "top" : "marginLeft";
         slider.args = {};
         // SLIDESHOW:
-        slider.manualPause = false;
+        slider.manualPause = true;
         // TOUCH/USECSS:
         slider.transitions = !vars.video && !fade && vars.useCSS && (function() {
           var obj = document.createElement('div'),

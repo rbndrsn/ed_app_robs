@@ -2,20 +2,22 @@
 <h2><%= @stack.name %></h2>
 <p><%= @stack.description %></p>
 
-<p><%= link_to 'Edit', edit_stack_path  %></p>
-
 <% unless @stack.cards.empty? %>
 
   <!-- Flexslider images -->
   <div class="flexslider">
     <ul class="slides">
-     <% @stack.cards.each do | card | %>
-      <li> 
-        <%= card['front'] %>
-        <%= card['back'] %>
-      </li>
-     <% end %>
+      <% @stack.cards.each do | card | %>
+        <li class="card"> 
+          <div class="card-content">
+            <div class="front cent"><%= card['front'] %></div>
+            <div class="back cent"><%= card['back'] %></div>
+          </div>
+        </li>
+      <% end %>
     </ul>
   </div>
 
 <% end %>
+
+<p><%= link_to 'Edit', edit_stack_path  %></p>
