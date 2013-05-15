@@ -4,4 +4,18 @@
 
 <p><%= link_to 'Edit', edit_stack_path  %></p>
 
-<%= @stack.to_a  %>
+<% unless @stack.cards.empty? %>
+
+  <!-- Flexslider images -->
+  <div class="flexslider">
+    <ul class="slides">
+     <% @stack.cards.each do | card | %>
+      <li> 
+        <%= card['front'] %>
+        <%= card['back'] %>
+      </li>
+     <% end %>
+    </ul>
+  </div>
+
+<% end %>

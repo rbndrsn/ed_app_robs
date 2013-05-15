@@ -10,4 +10,5 @@
  *
  *= require partials/style
  *= require_self
+ *= require_tree ./vendor
  */
