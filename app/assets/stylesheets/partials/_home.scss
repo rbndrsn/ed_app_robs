@@ -1,3 +1,8 @@
+.main_navigation {
+  font-size: 24px;
+}
+
+
 .stack_and_tag_list {
   color: $brand-beta;
   float: left;
@@ -6,7 +11,7 @@
   border-width: 2px;
 }
 .card {
-  background: $brand-gamma;
+  background: $brand-omnicron;
 }
 
 .card-content {
@@ -25,5 +30,8 @@
 
 .back {
   display: none;
+  background: $brand-gamma  
 }
+
+
 

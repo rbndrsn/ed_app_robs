@@ -13,7 +13,8 @@
 
   html {
     font-size: 100%;
-    background: $white;
+    background: rgb(208, 193, 164) url(image_path('bg_blur.jpg')) no-repeat top center fixed;
+    background-size: cover;
 	}
 
 	body {
@@ -24,15 +25,11 @@
 		font-family: $sans-serif;
 		color: $charcoalgrey;
 		-webkit-font-smoothing: antialiased;
+
 	}
 
   .wrapper {
     @extend .cf;
-    background: url(images/bg.jpg) no-repeat center center fixed; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
     position: relative;
     max-width: 62.5em;
     width: 96%;
