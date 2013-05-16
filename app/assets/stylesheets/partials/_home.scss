@@ -1,27 +1,45 @@
 .main_navigation {
   font-size: 24px;
+  width: 100%;
+  background: $offwhite;
+  filter: alpha(opacity=50);
+  padding-left: 7.5%;
 }
 
+footer {
+   position:absolute;
+   bottom:0;
+   width:100%;
+   height:24px;   /* Height of the footer */
+   background: $offwhite;
+}
+
+#ric {
+  font-family: $sans-serif  
+}
 
 .stack_and_tag_list {
-  color: $brand-beta;
+  color: $offwhite;
   float: left;
   list-style-type: none;
   padding: 10px;
   border-width: 2px;
+  background: $midgrey;
+  border-bottom-right-radius: 10% 5%;
 }
 .card {
-  background: $brand-omnicron;
+  background: $brand-beta;
 }
 
 .card-content {
-  min-height: 600px;
+  min-height: 400px;
   display: table;
-    width: 100%;
+  width: 100%;
 }
 
 .front, .back {
   display: table-cell;
+  text-align: center;
   vertical-align: middle;
   text-align: center;
   font-weight: bold;
@@ -30,8 +48,10 @@
 
 .back {
   display: none;
-  background: $brand-gamma  
+  background: $brand-gamma;  
 }
+
+
 
 
 

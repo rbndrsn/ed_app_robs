@@ -15,17 +15,19 @@
     font-size: 100%;
     background: rgb(208, 193, 164) url(image_path('bg_blur.jpg')) no-repeat top center fixed;
     background-size: cover;
+    height: 100%;
 	}
 
 	body {
 		min-width:252px;
-		width : 100%;
-		margin : 0 auto;
-		padding : 0;
+    min-height: 100%;
+		width: 100%;
+		margin: 0 auto;
+		padding: 0;
 		font-family: $sans-serif;
 		color: $charcoalgrey;
 		-webkit-font-smoothing: antialiased;
-
+    position:relative;
 	}
 
   .wrapper {

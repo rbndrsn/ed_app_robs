@@ -11,17 +11,25 @@
 </head>
 <body>
 
-    <div class="wrapper">
-        <nav class="main_navigation" role="primary">
-          <%= link_to "Home", root_path %>
-          <%= link_to "Stacks", stacks_path %>
-          <%= link_to "Create Stack", new_stack_path %>
-          <%= link_to "Tags", tags_path %>
-          <%= link_to "Create Tag", new_tag_path %>
-        </nav>
+       <nav class="main_navigation" role="primary">
+        <%= link_to "Home", root_path %>
+        <%= link_to "Stacks", stacks_path %>
+        <%= link_to "Create Stack", new_stack_path %>
+        <%= link_to "Tags", tags_path %>
+        <%= link_to "Create Tag", new_tag_path %>
+      </nav>
 
-      <%= yield %>
+      <div class="wrapper">
+        <%= yield %>
+      </div> <!-- /.wrapper -->
+      
+      <span class="quote">“It is not that I'm so smart. But I stay with the questions much longer” 
+        ― Albert Einstein</span>
 
-    </div> <!-- /.wrapper -->
+
+      <footer>
+         Rob is Cool
+      </footer>
+
   </body>
 </html>

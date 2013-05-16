@@ -16,7 +16,7 @@ class StacksController < ApplicationController
     @stack = Stack.new(params[:stack])
     respond_to do |format|
       if @stack.save
-        format.html { redirect_to @stack, notice: 'stack was successfully created.' }
+        format.html { redirect_to stacks_path, notice: 'stack was successfully created.' }
         format.json { render json: @stack, status: :created, location: @stack }
       else
         format.html { render action: "new" }

@@ -5,6 +5,7 @@ gem 'rails'
 # gem 'sqlite3'
 gem 'mongoid'
 gem 'thin'
+gem 'cocoon'
 
 group :development, :test do
   gem "rspec-rails"
@@ -20,6 +21,7 @@ group :development, :test do
   gem "database_cleaner"
   gem "selenium-webdriver"
   gem "factory_girl_rails"
+  gem "cocoon"
 end
 
 group :test do

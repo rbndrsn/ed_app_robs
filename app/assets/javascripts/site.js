@@ -1,8 +1,8 @@
 
 $(function(){
- $('.flexslider').flexslider({
+  var slider = $('.flexslider').flexslider({
     animation: "slide"
-  });
+  }).flexslider('pause');
 
  $('.card-content').on('click', function(event) {
   $(this).children('.front').fadeOut(function() {
