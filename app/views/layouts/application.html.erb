@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title><%= yield(:title) %> Education App</title>
+  <title><%= yield(:title) %> Flapp</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <%= stylesheet_link_tag "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
@@ -12,7 +12,7 @@
 <body>
 
        <nav class="main_navigation" role="primary">
-        <%= link_to "Home", root_path %>
+        <%= link_to "Flapp", root_path %>
         <%= link_to "Stacks", stacks_path %>
         <%= link_to "Create Stack", new_stack_path %>
         <%= link_to "Tags", tags_path %>
@@ -23,10 +23,6 @@
         <%= yield %>
       </div> <!-- /.wrapper -->
       
-      <span class="quote">“It is not that I'm so smart. But I stay with the questions much longer” 
-        ― Albert Einstein</span>
-
-
       <footer>
          Rob is Cool
       </footer>
