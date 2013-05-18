@@ -1,15 +1,15 @@
 <%= form_for @stack do |f| %>
 
   <%= f.label :name %><br />
-  <%= f.text_field :name, placeholder: "e.g. Ruby" %>
+  <%= f.text_field :name, placeholder: "e.g. Ruby"%>
 
   <br />
 
   <%= f.label :description %><br />
-  <%= f.text_area(:description, :cols => 30, :rows => 6) %>
+  <%= f.text_area(:description, placeholder: "description", :cols => 31, :rows => 4) %>
 
   <div class="new_card_headline">
-    <h2> Add your cards!</h2>
+    <h2 class="title_pad"> Cards:</h2> <!-- not correct -->
 
    <%= f.fields_for :cards do |card| %>
       <%= render 'card_fields', :f => card %>

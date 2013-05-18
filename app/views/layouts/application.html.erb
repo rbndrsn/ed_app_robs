@@ -12,20 +12,20 @@
 <body>
 
        <nav class="main_navigation" role="primary">
-        <%= link_to "Flapp", root_path %>
-        <%= link_to "Stacks", stacks_path %>
-        <%= link_to "Create Stack", new_stack_path %>
-        <%= link_to "Tags", tags_path %>
-        <%= link_to "Create Tag", new_tag_path %>
+        <div class="wrapper">
+          <%= link_to "Flapp", root_path %>
+          <%= link_to "Stacks", stacks_path %>
+          <%= link_to "Create Stack", new_stack_path %>
+          <%= link_to "Tags", tags_path %>
+          <%= link_to "Create Tag", new_tag_path %>
+        <div>
       </nav>
 
       <div class="wrapper">
         <%= yield %>
       </div> <!-- /.wrapper -->
       
-      <footer>
-         Rob is Cool
-      </footer>
+      <footer></footer>
 
   </body>
 </html>
