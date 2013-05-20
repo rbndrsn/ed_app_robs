@@ -1,17 +1,12 @@
 <div>
-  
-  <div>
-    <%= f.text_area(:front, placeholder: "Front of card goes here", :cols => 31, :rows => 4) %>
+    <%= f.text_area(:front, placeholder: "Front of card goes here", :cols => 50, :rows => 1) %>
   </div>
  <br>
   <div>
-    <%= f.text_area(:back, placeholder: "Back of card goes here", :cols => 31, :rows => 4) %>
+    <%= f.text_area(:back, placeholder: "Back of card goes here", :cols => 50, :rows => 1) %>
   </div>
 
   <%= link_to_remove_association "remove card", f %>
 
 
 
-
-
-</div>

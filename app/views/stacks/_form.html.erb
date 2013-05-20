@@ -9,15 +9,13 @@
   <%= f.text_area(:description, placeholder: "description", :cols => 31, :rows => 4) %>
 
   <div class="new_card_headline">
-    <h2 class="title_pad"> Cards:</h2> <!-- not correct -->
-
-   <%= f.fields_for :cards do |card| %>
-      <%= render 'card_fields', :f => card %>
-
-     <% end %>
+    <h2 class="title_pad"> Current Cards:</h2> 
+      <%= f.fields_for :cards do |card| %>
+        <%= render 'card_fields', :f => card %>
+      <% end %>
 
     <div class="links">
-      <%= link_to_add_association 'add card', f, :cards %>
+      <%= link_to_add_association 'add a new card', f, :cards %>
     </div>
       
   </div>

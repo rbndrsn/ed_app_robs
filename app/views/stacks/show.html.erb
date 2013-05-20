@@ -1,6 +1,6 @@
 
 <h2 class="title_pad">Stack: <%= @stack.name %></h2>
-<p><%= link_to 'Edit', edit_stack_path  %></p>
+<p><%= link_to 'Edit', edit_stack_path  %> <%= link_to "Back to list", stacks_path %></p>
 
 <% if @stack.has_attribute?('cards') and @stack.cards.any? %>
   <!-- Flexslider images -->
