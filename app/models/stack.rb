@@ -9,7 +9,7 @@ class Stack
 
   embeds_many :cards
 
-  accepts_nested_attributes_for :cards
+  accepts_nested_attributes_for :cards, autosave: true, reject_if: :all_blank, allow_destroy: true
 
   has_and_belongs_to_many :tags
 end

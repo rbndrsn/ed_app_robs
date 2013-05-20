@@ -17,11 +17,12 @@
             <th width="70%">Back</th> 
           </tr>
       </thead>
+      <tbody>
+        <%= f.fields_for :cards do |card| %>
+          <%= render 'card_fields', :f => card %>
+        <% end %>
+      </tbody>
     </table>
-      <%= f.fields_for :cards do |card| %>
-        <%= render 'card_fields', :f => card %>
-      <% end %>
-
     <div class="links">
       <%= link_to_add_association 'add a new card', f, :cards %>
     </div>
