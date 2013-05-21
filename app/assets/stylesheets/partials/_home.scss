@@ -14,7 +14,7 @@ footer {
 }
 
 #ric {
-  font-family: $sans-serif  
+  font-family: $sans-serif;
 }
 
 .stack_and_tag_list {
@@ -50,11 +50,35 @@ footer {
   background: $brand-gamma;  
 }
 
-.title_pad {
+.title-pad {
   padding-top: 5px;
 }
 
-.edit_list {
+.edit-list {
       list-style-type: none;
       color: $white;
+}
+
+.table-heading{
+  color: $offwhite;
+  font-family: $sans-serif;
+  width: 100%;
+  text-align: left;
+}
+
+.remove-underline-link {
+  text-decoration: none; 
+  color: $offwhite;
+}
+
+.table-padding {
+  padding: 5px;
+}
+
+.new-form-padding {
+  padding: 1px;
+}
+
+.submit-btn {
+border-radius: 3px;
 }

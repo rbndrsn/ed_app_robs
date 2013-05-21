@@ -1,0 +1,60 @@
+<%= form_for @stack do |f| %>
+
+<!-- error handling -->
+
+   <% if @stack.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@stack.errors.count, "error") %> Prevented your stack from being created:</h2>
+      <ul>
+      <% @stack.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <!-- new stack forms -->
+
+ <div class="new-form-padding">
+  <%= f.text_area(:name, placeholder: "Stack name here please", :cols => 50, :rows => 1)%>
+</div>
+
+  <br />
+
+  <div class="new-form-padding">
+    <%= f.text_area(:description, placeholder: "Description here please", :cols => 50, :rows => 4) %>
+  </div>
+
+  <div class="new_card_headline">
+    <h2 class="title-pad"> Add your first cards (Two are required):</h2> 
+      <tbody>
+        <tr class="nested-fields">
+         <tr class="nested-fields">
+          <!-- adds two blank cards on page -->
+            <td class="table-padding"><textarea cols="50" id="stack_cards_attributes_new_cards_front" name="stack[cards_attributes][new_cards][front]" placeholder="Add your question" rows="1">
+          </textarea></td>
+            <td class="table-padding"> <textarea cols="50" id="stack_cards_attributes_new_cards_back" name="stack[cards_attributes][new_cards][back]" placeholder="Add your answer" rows="1">
+          </textarea></td>
+            <td class ="table-padding"><span><input id="stack_cards_attributes_new_cards__destroy" name="stack[cards_attributes][new_cards][_destroy]" type="hidden" /><a href="#" class="remove-underline-link remove_fields dynamic" data-confirm="Are you sure that you want to remove this card?">&times;</a> </span></td>
+          </tr>
+          <tr class="nested-fields">
+            <td class="table-padding"><textarea cols="50" id="stack_cards_attributes_new_cards_front" name="stack[cards_attributes][new_cards][front]" placeholder="Add your question" rows="1">
+          </textarea></td>
+            <td class="table-padding"> <textarea cols="50" id="stack_cards_attributes_new_cards_back" name="stack[cards_attributes][new_cards][back]" placeholder="Add your answer" rows="1">
+          </textarea></td>
+            <td class ="table-padding"><span><input id="stack_cards_attributes_new_cards__destroy" name="stack[cards_attributes][new_cards][_destroy]" type="hidden" /><a href="#" class="remove-underline-link remove_fields dynamic" data-confirm="Are you sure that you want to remove this card?">&times;</a> </span></td>
+          </tr>
+              <%= f.fields_for :cards do |card| %>
+                <%= render 'card_fields', :f => card %>
+              <% end %>
+      </tbody>
+    </table>
+    <div class="links">
+      <%= link_to_add_association 'Add another card', f, :cards %>
+    </div>
+  </div>
+
+  <span class="submit-btn"><%= f.submit %></span>
+
+
+<% end %>
