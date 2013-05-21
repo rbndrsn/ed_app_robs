@@ -10,6 +10,10 @@ class StacksController < ApplicationController
 
   def new
     @stack = Stack.new
+
+    2.times do |num|
+      @stack.cards << Card.new(front: "#{num} front", back: "#{num} back")
+    end
   end
 
   def create
