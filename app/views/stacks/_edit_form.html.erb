@@ -1,11 +1,14 @@
 <%= form_for @stack do |f| %>
 
-  <%= f.text_area(:name, placeholder: "e.g. Ruby", :cols => 50, :rows => 1)%>
+  <%= f.text_field(:name, placeholder: "e.g. Ruby")%>
 
   <br />
 
   <%= f.label :description %><br />
-  <%= f.text_area(:description, placeholder: "description", :cols => 50, :rows => 4) %>
+  <!-- <fieldset> -->
+    <%= f.text_area(:description, placeholder: "description", :cols => 50, :rows => 4) %>
+    <p class="counter-text"><span id="counter">200</span> characters left.</p>
+  <!-- </fieldset> -->
 
   <div class="new_card_headline">
     <h2 class="title-pad"> Current Cards:</h2> 

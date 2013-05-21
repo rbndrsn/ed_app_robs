@@ -1,26 +1,12 @@
-<div>
-    <%= f.text_area(:front, placeholder: "Front of card goes here", :cols => 31, :rows => 4) %>
-  </div>
- <br>
+<ul>
+  <% for stack in @stacks %>
+    <li class="stack_and_tag_list"> <%= stack.name %> | <%= link_to 'View', stack_path(stack.id) %> | <%= link_to 'Delete Stack', stack, method: :delete, data: { confirm: 'Are you sure?' } %>
+<p>
   <div>
-    <%= f.text_area(:back, placeholder: "Back of card goes here", :cols => 31, :rows => 4) %>
+    <%= stack.description %>
   </div>
-
-  <%= link_to_remove_association "remove card", f %>
-
-
-
-
-
-list of cards, formatted, from edit.html.erb
-
-   <% @stack.cards.each do | card | %> 
-        <li class="edit_list">
-          <div >
-            <div>Front <%= card['front'] %> Edit front</div> 
-            <div>Back <%= card['back'] %> Edit back</div>
-          </div>
-          <div>Edit Both</div>
-        </li>
-   <% end %> 
-
+</p>
+    </li>
+  
+  <% end %>
+</ul>

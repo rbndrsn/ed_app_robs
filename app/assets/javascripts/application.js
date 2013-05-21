@@ -17,28 +17,8 @@
 //= require_tree ./vendor
 //= require_tree .
 
-
-
-/*
-$(function(){
-
-  // Load stacks JSON on nav stacks click
-  $(".stacks_btn").on('click', function(evt){
-
-    //Prevent default link behavior
-    evt.preventDefault();
-
-    // Grab the actual link and set it as a variable to use in getJSON
-    var a_href = $(this).attr('href');
-
-    // Get JSON data, add a title to the content and loop over results outputting names.
-    $.getJSON(a_href, function(data) {
-      $('#content').html('<h2>Stacks</h2>');
-      $.each(data, function(key, val) {
-        $('#content').append('<p id="' + val.id + '">name : ' + val.name+ '</p>');
-      });
+$(function() {
+  $('textarea').simplyCountable({
+    maxCount: 160
     });
-  });
-
-})
-*/
+});

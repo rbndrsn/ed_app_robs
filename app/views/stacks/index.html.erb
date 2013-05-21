@@ -1,8 +1,12 @@
-
-<ul>
+<ul class="stack_list">
   <% for stack in @stacks %>
-    <li class="stack_and_tag_list" id="<%= stack.id %>"><%= stack.name %> | <%= link_to 'View', stack_path(stack.id) %> | <%= link_to 'Delete Stack', stack, method: :delete, data: { confirm: 'Are you sure?' } %></li>
+    <li >
+     <h2><%= stack.name %> </h2>
+      <p>
+        <%= stack.description %><br>
+        <%= link_to 'View', stack_path(stack.id) %> | <%= link_to 'Delete Stack', stack, method: :delete, data: { confirm: 'Are you sure?' } %>
+      </p>
+    </li>
+  
   <% end %>
 </ul>
-</div>
-
