@@ -81,6 +81,8 @@ footer {
 
 .submit-btn {
   border-radius: 3px;
+  
+  
 }
 
 #error-explanation {
@@ -91,4 +93,8 @@ footer {
 #error-msg {
   color: $errorcolor;
   font-size: 16px;
+}
+
+.add-links {
+  font-size: 22px;
 }

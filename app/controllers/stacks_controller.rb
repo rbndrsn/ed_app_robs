@@ -12,7 +12,7 @@ class StacksController < ApplicationController
     @stack = Stack.new
 
     2.times do |num|
-      @stack.cards << Card.new(front: "add #{(num + 1).ordinated} question", back: "add #{(num + 1).ordinalize} answer")
+      @stack.cards << Card.new(front: "add #{(num + 1).ordinalize} question", back: "add #{(num + 1).ordinalize} answer")
     end
   end
 

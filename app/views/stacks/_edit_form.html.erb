@@ -23,14 +23,14 @@
         <% end %>
       </tbody>
     </table>
-    <div class="links">
+    <div class="add-links">
       <%= link_to_add_association 'add a new card', f, :cards %>
     </div>
       
   </div>
 
   
-  <span class="submit-btn"><%= f.submit %></span>
+  <%= f.submit "Update Stack", class:"submit-btn" %>
 
 
 <% end %>

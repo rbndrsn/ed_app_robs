@@ -42,12 +42,12 @@
     </table>
 
 
-    <div class="links">
+    <div class="add-links">
       <%= link_to_add_association 'Add another card', f, :cards %>
     </div>
   </div>
 
-  <span class="submit-btn"><%= f.submit %></span>
+  <%= f.submit "Create Stack", class:"submit-btn" %>
 
 
 <% end %>

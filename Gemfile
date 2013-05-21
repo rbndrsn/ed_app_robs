@@ -22,6 +22,7 @@ group :development, :test do
   gem "selenium-webdriver"
   gem "factory_girl_rails"
   gem "cocoon"
+  gem "linguistics"
 end
 
 group :test do
