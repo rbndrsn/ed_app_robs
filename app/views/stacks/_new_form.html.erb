@@ -3,11 +3,11 @@
 <!-- error handling -->
 
    <% if @stack.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@stack.errors.count, "error") %> Prevented your stack from being created:</h2>
+    <div id="error-explanation">
+      <%= pluralize(@stack.errors.count, "error") %> prevented your stack from being created:
       <ul>
       <% @stack.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
+        <li id="error-msg"><%= msg %></li>
       <% end %>
       </ul>
     </div>

@@ -9,8 +9,6 @@ class Stack
 
   validates :name, :description, presence: :true 
   validates :name, :uniqueness => { :case_sensitive => false }
-  validates :description, presence: :true
-
   validates_presence_of :cards
 
   embeds_many :cards

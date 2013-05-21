@@ -80,5 +80,15 @@ footer {
 }
 
 .submit-btn {
-border-radius: 3px;
+  border-radius: 3px;
+}
+
+#error-explanation {
+  color: $errorcolor;
+  font-size: 18px;
+}
+
+#error-msg {
+  color: $errorcolor;
+  font-size: 16px;
 }
