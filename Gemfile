@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
-gem 'rails'
+ruby '1.9.3'
+gem  'rails', '3.2.3'
 
 # gem 'sqlite3'
 gem 'mongoid'
