@@ -20,10 +20,10 @@ $(function(){
         $(this).parent('.card-content');
       });
     });
-
   }
-
 });
+
+
 
 
 

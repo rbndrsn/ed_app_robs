@@ -16,13 +16,14 @@
   <!-- new stack forms -->
 
  <div class="new-form-padding">
-  <%= f.text_area(:name, placeholder: "Stack name here please", :cols => 50, :rows => 1)%>
+  <%= f.text_field(:name, placeholder: "Stack name here please",  :rows => 1)%>
 </div>
 
   <br />
 
   <div class="new-form-padding">
     <%= f.text_area(:description, placeholder: "Description here please", :cols => 50, :rows => 4) %>
+       <p class="counter-text"><span id="counter">200</span>/200 characters left.</p>
   </div>
 
   <div class="new_card_headline">

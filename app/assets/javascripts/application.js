@@ -18,7 +18,10 @@
 //= require_tree .
 
 $(function() {
-  $('textarea').simplyCountable({
-    maxCount: 160
+  $('#stack_description').simplyCountable({
+      maxCount: 200,
+      strictMax: true
     });
 });
+
+
