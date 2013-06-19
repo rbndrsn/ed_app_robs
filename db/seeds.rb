@@ -1,14 +1,4 @@
 Stack.destroy_all
-Tag.destroy_all
-
-Tag.create([
-  { name: "Ruby" },
-  { name: "jQuery" },
-  { name: "HTML" },
-  { name: "HTTP" },
-  { name: "Javascript" },
-  { name: "Backbone" }
-])
 
 Stack.create([
   {

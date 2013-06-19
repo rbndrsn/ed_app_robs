@@ -47,17 +47,5 @@ describe StacksController do
         }.to raise_error Mongoid::Errors::DocumentNotFound
       end
     end
-  
-
-  describe "DELETE #destroy" do
-    context "with an existing stack" do
-      before :each do
-        @stack = create(:stack)
-      end
-  
-      it "deletes the stack" do
-        expect{ delete :destroy, id: @stack }.to change(Stack, :count).by(-1)
-      end
-    end
-  end
+    
 end
