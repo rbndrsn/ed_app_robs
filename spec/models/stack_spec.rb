@@ -7,11 +7,6 @@ describe Stack do
     expect(stack).to be_an_instance_of(Stack)
   end
 
-  it "is created and has an id" do
-    stack = Stack.create()
-    expect(stack.id).to_not eq nil
-  end
-
   it "has a card" do
     name = 'Stack 1'
     description = 'Lorem ipsum dolor'
@@ -39,16 +34,7 @@ describe Stack do
     expect(stack.is_custom).to eq true
   end
 
-  it "finds all stacks tagged with Ruby" do
-    # ----   Stack.all(:tag_ids => [tag._id])
-    s1 = Stack.create( name: "Beginning Ruby" )
-    s2 = Stack.create( name: "Advanced Ruby" )
-    t1 = Tag.create( name: "Ruby" )
-    s1.tags << t1
-    s2.tags << t1
-    ruby_search = Stack.all(:tag_ids => [t1._id])
-    expect(ruby_search).to_not eq nil
-  end
+
 
 
 end #end Stack
